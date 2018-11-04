@@ -19,19 +19,21 @@ d = 0;
 % ADD CODE HERE
 [N,M] = size(x_1);
 
-if type == "L1"
-    for i=1:N
-        d=d+abs(x_1(i)-x_2(i));   
-    end
-elseif type == "L2"
-    for i=1:N
-        d=d+(abs(x_1(i)-x_2(i)))^2;
-    end
-    d=sqrt(d);
-elseif type == "LInf" 
-    absDiff = abs( x_1 - x_2 ) ;
-    d = max( absDiff ) ;
-end 
+switch type
+    case 'L1'  % Manhattan Distance
+        for i=1:N
+            d=d+abs(x_1(i)-x_2(i));   
+        end   
+    case 'L2' % Euclidean Distance      
+        for i=1:N
+            d=d+(abs(x_1(i)-x_2(i)))^2;
+        end
+        d=sqrt(d);
+   
+    case 'LInf' % Infinity Norm   
+        absDiff = abs( x_1 - x_2 ) ;
+        d = max( absDiff ) ;
+end
 
 % END CODE
 

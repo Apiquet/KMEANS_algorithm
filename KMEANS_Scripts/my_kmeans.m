@@ -59,8 +59,6 @@ end
 iter = 0;
 Mu=Mu_init;
 while (iter <= MaxIter) && (norm(Mu-Mu_previous)>=0.01)
-
-     %%%%% Implement K-Means Algorithm HERE %%%%
      Mu_previous=Mu;
      % Step 2. Distances from X to Mu
      if (K==1)
@@ -68,7 +66,6 @@ while (iter <= MaxIter) && (norm(Mu-Mu_previous)>=0.01)
          labels=ones(1,M);
      else
          d_i = my_distX2Mu(X, Mu, type);
-         %Step 3. Assignment Step: Mu Responsability  
          %Equation 5
          [~,labels] = min(d_i);
          %Equatin 6
@@ -92,7 +89,7 @@ while (iter <= MaxIter) && (norm(Mu-Mu_previous)>=0.01)
             end
         end
 
-        %Step 4. Update Step: Recompute Mu % Equation 7  
+        %Recompute Mu   
         for j=1:K
             Multiplication_Matrix = zeros(N, K);
             Sum = 0;

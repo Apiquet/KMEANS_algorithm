@@ -1,7 +1,3 @@
-%% DO NOT MODIFY THIS UNLESS YOU ARE ON YOUR OWN COMPUTER
-% addpath(genpath("C:\Program Files\MATLAB\toolbox\ML_toolbox-master"))
-% addpath("../check_utils_encr")
-
 clear; 
 close all; 
 clc;
@@ -29,7 +25,7 @@ K_range(3) = [];
 K_range(3) = [];
 
 % plot the original image and the compressed one side by side
-figure('Name', 'Original and compressed images')
+figure('Name', 'Original and reconstructed images after compression with K clusters')
 subplot(2,2,1)
 imshow(img)
 title('Original image')
