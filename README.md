@@ -1,5 +1,7 @@
 # KMEANS algorithm
 
+Project: https://apiquet.com/2018/11/04/k-means-clustering-algorithm/
+
 K-means algorithm classes n observations into k 
 clusters in which each observation belongs to the nearest cluster. 
 
